@@ -27,15 +27,6 @@
 
 
 
-  
-  <!-- HEADER -->
-<!--   <header class="header" role="banner">
-    <a href="https://chtennisacademy.com" class="brand" aria-label="Ir al sitio principal de CH Tennis">
-      <img src="img/logo.png" alt="Logo CH Tennis Academy" width="160" height="56"/>
-      
-    </a>
-  </header> -->
-
   <header class="header" role="banner">
   <a href="https://chtennisacademy.com" class="brand" aria-label="Ir al sitio principal de CH Tennis">
 <svg width="127" height="160" viewBox="0 0 127 160" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -62,85 +53,24 @@
 ------------------ -->
 
 
-  <main class="hero" id="top" role="main">
+<main class="hero" id="top" role="main">
     <h1 class="hero__title">¡Gracias por ser parte del Torneo Hunter's&nbsp;Creek&nbsp;Spring&nbsp;2025!</h1>
     <p class="hero__subtitle">Nos llena de orgullo haber compartido la cancha contigo. Aquí un adelanto de fotos y videos; muy pronto publicaremos más.</p>
+
     <section class="gallery" aria-label="Galería preliminar de fotos">
-      <figure class="gallery__item"><img src="img/image1.jpg" alt="Momento destacado del torneo 1" loading="lazy" /></figure>
-      <figure class="gallery__item"><img src="img/image2.jpg" alt="Momento destacado del torneo 2" loading="lazy" /></figure>
-      <figure class="gallery__item"><img src="img/image3.jpg" alt="Momento destacado del torneo 3" loading="lazy" /></figure>
-      <figure class="gallery__item"><img src="img/image4.jpg" alt="Momento destacado del torneo 4" loading="lazy" /></figure>
-      <figure class="gallery__item"><img src="img/image5.jpg" alt="Momento destacado del torneo 5" loading="lazy" /></figure>
-      <figure class="gallery__item"><img src="img/image6.jpg" alt="Momento destacado del torneo 6" loading="lazy" /></figure>
+      <figure class="gallery__item"><img src="img/image1.jpg" alt="Momento destacado del torneo 1" width="400" height="300" loading="lazy" decoding="async" /></figure>
+      <figure class="gallery__item"><img src="img/image2.jpg" alt="Momento destacado del torneo 2" width="400" height="300" loading="lazy" decoding="async" /></figure>
+      <figure class="gallery__item"><img src="img/image3.jpg" alt="Momento destacado del torneo 3" width="400" height="300" loading="lazy" decoding="async" /></figure>
+      <figure class="gallery__item"><img src="img/image4.jpg" alt="Momento destacado del torneo 4" width="400" height="300" loading="lazy" decoding="async" /></figure>
+      <figure class="gallery__item"><img src="img/image5.jpg" alt="Momento destacado del torneo 5" width="400" height="300" loading="lazy" decoding="async" /></figure>
+      <figure class="gallery__item"><img src="img/image6.jpg" alt="Momento destacado del torneo 6" width="400" height="300" loading="lazy" decoding="async" /></figure>
     </section>
+
     <p class="hero__cta">🎾 Sigue entrenando fuerte y nos vemos en la próxima edición.</p>
   </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- FOOTER -->
   <footer class="footer">
     <small>&copy; 2025 CH Tennis Academy · Todos los derechos reservados</small>
   </footer>
-
-  <!-- Lightbox overlay -->
-  <div class="lightbox" hidden>
-    <button class="lightbox__close" aria-label="Cerrar ventana">&times;</button>
-    <img src="" alt="Imagen ampliada" />
-  </div>
-
-  <script>
-    // CH Tennis · Landing 2025 — interactividad mínima
-    console.info("🏆 Landing CH Tennis 2025 cargada con fotos y videos.");
-
-    /*
-     * Pequeña experiencia lightbox: al pulsar una imagen, se abre
-     * un overlay con la foto ampliada. Cierre con botón, clic fuera o ESC.
-     */
-    const imageNodes = document.querySelectorAll('.gallery__item img');
-    const lightbox = document.querySelector('.lightbox');
-    const lightboxImg = lightbox.querySelector('img');
-    const closeBtn = lightbox.querySelector('.lightbox__close');
-
-    const openLightbox = (src, alt) => {
-      lightboxImg.src = src;
-      lightboxImg.alt = alt;
-      lightbox.hidden = false;
-      document.body.style.overflow = 'hidden'; // Evita scroll de fondo
-    };
-
-    const closeLightbox = () => {
-      lightbox.hidden = true;
-      document.body.style.overflow = '';
-      lightboxImg.src = '';
-      lightboxImg.alt = '';
-    };
-
-    imageNodes.forEach((img) => {
-      img.addEventListener('click', () => openLightbox(img.src, img.alt));
-    });
-
-    closeBtn.addEventListener('click', closeLightbox);
-
-    // Cerrar al hacer clic fuera de la imagen
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === e.currentTarget) closeLightbox();
-    });
-
-    // Cerrar con ESC
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !lightbox.hidden) closeLightbox();
-    });
-  </script>
 </body>
 </html>
